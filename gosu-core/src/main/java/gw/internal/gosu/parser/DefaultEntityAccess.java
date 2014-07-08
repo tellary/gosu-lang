@@ -30,8 +30,6 @@ import gw.lang.reflect.gs.ICompilableType;
 import gw.lang.reflect.module.IModule;
 import gw.util.GosuExceptionUtil;
 import gw.util.IFeatureFilter;
-import gw.util.ILogger;
-import gw.util.SystemOutLogger;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -49,7 +47,6 @@ import java.util.Set;
  */
 public class DefaultEntityAccess extends BaseService implements IEntityAccess
 {
-  public static final SystemOutLogger DEFAULT_LOGGER = new SystemOutLogger(SystemOutLogger.LoggingLevel.WARN);
   private static DefaultEntityAccess g_instance;
   private static final ITypeUsesMap EMPTY_TYPE_USES = new TypeUsesMap( Collections.<String>emptyList() ).lock();
   private List<IGosuClassLoadingObserver> _classLoadingObservers;
@@ -201,12 +198,6 @@ public class DefaultEntityAccess extends BaseService implements IEntityAccess
   public boolean isInternal( IType cls )
   {
     return false;
-  }
-
-  @Override
-  public ILogger getLogger()
-  {
-    return DEFAULT_LOGGER;
   }
 
   @Override

@@ -29,6 +29,7 @@ import gw.lang.reflect.module.IExecutionEnvironment;
 import gw.lang.reflect.module.IModule;
 import gw.lang.reflect.module.IProject;
 import gw.util.GosuExceptionUtil;
+import gw.util.GosuLoggerFactory;
 import gw.util.ILogger;
 
 import java.io.File;
@@ -673,7 +674,7 @@ public class ExecutionEnvironment implements IExecutionEnvironment
   }
 
   private static ILogger getLogger() {
-    return CommonServices.getEntityAccess().getLogger();
+    return GosuLoggerFactory.getLogger();
   }
 
 }
