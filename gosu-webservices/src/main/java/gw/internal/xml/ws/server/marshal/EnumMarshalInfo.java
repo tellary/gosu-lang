@@ -8,7 +8,6 @@ import gw.internal.schema.gw.xsd.w3c.xmlschema.Enumeration;
 import gw.internal.schema.gw.xsd.w3c.xmlschema.Restriction;
 import gw.internal.schema.gw.xsd.w3c.xmlschema.SimpleType;
 import gw.internal.schema.gw.xsd.w3c.xmlschema.types.complex.LocalElement;
-import gw.internal.xml.IXmlLoggerFactory;
 import gw.internal.xml.config.XmlServices;
 import gw.internal.xml.ws.server.WsiServiceInfo;
 import gw.lang.reflect.IEnumConstant;
@@ -16,7 +15,6 @@ import gw.lang.reflect.IEnumType;
 import gw.lang.reflect.IEnumValue;
 import gw.lang.reflect.IType;
 import gw.lang.reflect.java.IJavaType;
-import gw.lang.reflect.java.JavaTypes;
 import gw.xml.XmlElement;
 import gw.xml.XmlSchemaAccess;
 
@@ -80,7 +78,7 @@ public class EnumMarshalInfo extends MarshalInfo {
         }
         throw new RuntimeException("invalid " + _type + " '" + componentElement.getText() + "");
       } catch (Throwable e) {
-        XmlServices.getLogger(IXmlLoggerFactory.Category.XmlUnMarshal).error("Exception on " + _type + " '" + componentElement.getText() + "", e);
+        XmlServices.getLogger(XmlServices.Category.XmlUnMarshal).error("Exception on " + _type + " '" + componentElement.getText() + "", e);
       }
     }
     IEnumValue value = _type.getEnumValue(componentElement.getText());
@@ -102,9 +100,9 @@ public class EnumMarshalInfo extends MarshalInfo {
             return;
           }
         }
-        XmlServices.getLogger(IXmlLoggerFactory.Category.XmlMarshal).error("Couldn't find " + _type + ": " + obj);
+        XmlServices.getLogger(XmlServices.Category.XmlMarshal).error("Couldn't find " + _type + ": " + obj);
       } catch (Throwable e) {
-        XmlServices.getLogger(IXmlLoggerFactory.Category.XmlUnMarshal).error("Exception on " + _type + ": " + obj, e);
+        XmlServices.getLogger(XmlServices.Category.XmlUnMarshal).error("Exception on " + _type + ": " + obj, e);
       }
     }
     else { // typelists, gosu enums
