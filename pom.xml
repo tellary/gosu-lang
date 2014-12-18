@@ -27,9 +27,9 @@
     <module>gosu-test-api</module>
     <module>gosu-webservices</module>
     <module>gosu-xml</module>
-    <module>idea-gosu-plugin</module>
-    <module>ij-compiler-api</module>
-    <module>ij-editor-devtools</module>
+    <!--<module>idea-gosu-plugin</module>-->
+    <!--<module>ij-compiler-api</module>-->
+    <!--<module>ij-editor-devtools</module>-->
   </modules>
 
   <build>
