@@ -22,7 +22,7 @@
     <launcher.aether.version>2.1</launcher.aether.version>
     <jline.version>0.9.94</jline.version>
     <dist.man.repo.url>http://gosu-lang.org/nexus/content/repositories/gosu</dist.man.repo.url>
-    <dist.man.snapshotrepo.url>http://gosu-lang.org/nexus/content/repositories/snapshots</dist.man.snapshotrepo.url>
+    <dist.man.snapshotrepo.url>http://nexus.guidewire.com/content/repositories/snapshots-dev/</dist.man.snapshotrepo.url>
   </properties>
 
   <repositories>
